@@ -40,7 +40,7 @@ mongoose.connect(url, function(err, db){
         }
 
         // Get chats from mongo collection
-        chat.find().limit(100).sort({_id:1}).toArray(function(err, res){
+        chat.find().limit(100).sort({_id:-1}).toArray(function(err, res){
             if(err){
                 throw err;
             }
